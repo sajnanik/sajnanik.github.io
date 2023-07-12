@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Kunal Sajnani Chhabria
+title: Kunal Sajnani | Cybersecurity Analyst
 email:
 description: 🔒 Aspiring Cybersecurity Specialist | 🖥️ IT professional | 🤝 Technical Account Manager | 🔗 Network Engineer | 🌎 Travel enthusiast
 github_username: https://sajnanik.github.io/
@@ -55,7 +55,7 @@ plugins:
 
 author:
   name   : "Kunal Sajnani"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/profile-pic.jpg"
   bio    : "🔒 Aspiring Cybersecurity Specialist | 🖥️ IT professional | 🤝 Technical Account Manager | 🔗 Network Engineer | 🌎 Travel enthusiast"
   links:
     - label: "Website"
