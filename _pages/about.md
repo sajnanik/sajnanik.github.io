@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Hi there, I'm Kunal, and I'm passionate about exploring the world and all the amazing cultures it has to offer. When I'm not busy planning my next adventure, you can usually find me working on my latest IT project.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I've spent several years in the field, with experience both as a Technical Account Manager and a Network Engineer. As a T.A.M., I honed my skills in client communication, problem-solving, and project management, while as a Network Engineer, I developed a deep understanding of network design, implementation, and troubleshooting.
+
+But my true passion lies in cybersecurity, and I'm currently working towards becoming a specialist in the field. I'm particularly interested in threat analysis, incident response, and ethical hacking, and I'm always looking for new opportunities to learn and grow.
