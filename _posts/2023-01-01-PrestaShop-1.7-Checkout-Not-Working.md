@@ -40,7 +40,7 @@ After some trial and error, I found a simple yet effective fix. Here's what you 
 
 8. Clear Cache: After making changes to the address formats, it's essential to clear the PrestaShop cache. Go to the "Advanced Parameters" tab in the admin panel and select "Performance." Click on the "Clear cache" button to ensure the changes take effect.
 
-![PrestaShop Checkout Issue](assets/images/prestashop-checkout-1.7-issue.png)
+![Prestashop Address Format Menu](/assets/images/prestashop-checkout-1.7-issue.png "Prestashop Checkout Issue")
 
 
 ## Conclusion
