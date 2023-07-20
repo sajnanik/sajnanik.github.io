@@ -15,28 +15,28 @@ When setting up a server, it's crucial to implement strong security measures to 
 ## Method 1: Using TCP Wrappers (hosts.allow and hosts.deny)
 ### Pros:
 
-    - Simple configuration using plain text files.
-    - Provides granular control over allowed and denied IP addresses.
-    - Works for various services that support TCP wrappers.
+- Simple configuration using plain text files.
+- Provides granular control over allowed and denied IP addresses.
+- Works for various services that support TCP wrappers.
 
 ### Cons:
 
-    - Requires careful management of allowed and denied IPs to avoid accidental blocking.
+- Requires careful management of allowed and denied IPs to avoid accidental blocking.
 
 ### Steps:
 
-    1. Open the hosts.allow file with a text editor: sudo nano /etc/hosts.allow
-    2. Add allowed services and IP addresses or ranges using the following syntax:
+ 1. Open the hosts.allow file with a text editor: sudo nano /etc/hosts.allow
+2. Add allowed services and IP addresses or ranges using the following syntax:
 
 ```
 sshd: 192.168.1.0/24
 httpd: 10.0.0.1
 
 ```
-	3. Open the hosts.deny file: sudo nano /etc/hosts.deny
-	4. Add the ALL: ALL entry to deny all other IPs not explicitly allowed.
+3. Open the hosts.deny file: sudo nano /etc/hosts.deny
+4. Add the ALL: ALL entry to deny all other IPs not explicitly allowed.
 	
-	```
+```
 ALL: ALL
 
 ```
@@ -44,20 +44,20 @@ ALL: ALL
 ## Method 2: Configuring IPTables Firewall Rules
 ### Pros:
 
-    - Provides robust packet filtering capabilities.
-    - Allows advanced control over network traffic.
+- Provides robust packet filtering capabilities.
+- Allows advanced control over network traffic.
 
 ### Cons:
 
-    - Requires a good understanding of IPTables syntax.
-    - May require additional rules for specific services (e.g., SSH).
+- Requires a good understanding of IPTables syntax.
+- May require additional rules for specific services (e.g., SSH).
 
 ### Steps:
 
-    1. Install IPTables if not already installed: sudo apt-get install iptables
-    2. Create rules to allow specific IPs and deny all others. For example:
+1. Install IPTables if not already installed: sudo apt-get install iptables
+2. Create rules to allow specific IPs and deny all others. For example:
 	
-	```
+```
 sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 sudo iptables -A INPUT -s 10.0.0.1 -j ACCEPT
 sudo iptables -A INPUT -j DROP
@@ -67,26 +67,27 @@ sudo iptables -A INPUT -j DROP
 ## Method 3: Utilizing Uncomplicated Firewall (UFW)
 ## Pros:
 
-    - Easier syntax than IPTables for basic firewall rules.
-    - Simplifies the process of restricting access to specific IPs.
+- Easier syntax than IPTables for basic firewall rules.
+- Simplifies the process of restricting access to specific IPs.
 
 ### Cons:
 
-    - Limited advanced options compared to IPTables.
-    - May require additional rules for specific services (e.g., SSH).
+- Limited advanced options compared to IPTables.
+- May require additional rules for specific services (e.g., SSH).
 
 ### Steps:
 
-    1. Install UFW if not already installed: sudo apt-get install ufw
-    2. Allow specific IPs: sudo ufw allow from <IP> to any
-    Example:
+1. Install UFW if not already installed: sudo apt-get install ufw
+2. Allow specific IPs: sudo ufw allow from <IP> to any
+Example:
+
 ```	
 sudo ufw allow from 192.168.1.0/24 to any
 sudo ufw allow from 10.0.0.1 to any
 ```
-	3. Enable UFW: sudo ufw enable
+3. Enable UFW: sudo ufw enable
 	
-	## Conclusion
+## Conclusion
 
 Implementing IP address restrictions is an essential aspect of server security. Each method offers varying degrees of control and complexity. TCP Wrappers are suitable for simple setups, while IPTables and UFW provide more advanced options. Choose the method that best fits your needs and expertise, and always maintain a secure backup plan to avoid accidental lockouts. Remember, the goal is to strike a balance between stringent security and convenient access for legitimate users.
 
