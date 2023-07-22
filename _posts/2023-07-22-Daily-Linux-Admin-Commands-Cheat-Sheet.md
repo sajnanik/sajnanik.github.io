@@ -13,7 +13,7 @@ Below is a compact cheat sheet for CentOS and Ubuntu, including common tasks and
 Linux System Administration Cheat Sheet
 Updates:
 
-    CentOS:
+CentOS:
 
 ```
 sudo yum check-update   # Check for available updates
@@ -28,7 +28,7 @@ sudo apt upgrade        # Upgrade installed packages
 
 Security Logs:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 sudo tail -n 50 /var/log/secure   # Check the tail of security logs
@@ -36,7 +36,7 @@ sudo tail -n 50 /var/log/secure   # Check the tail of security logs
 
 Firewall Logs:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 sudo tail -n 50 /var/log/firewalld   # Check the tail of firewall logs
@@ -44,7 +44,7 @@ sudo tail -n 50 /var/log/firewalld   # Check the tail of firewall logs
 
 Firewall Rules:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 sudo firewall-cmd --list-all   # View all firewall rules
@@ -52,7 +52,7 @@ sudo firewall-cmd --list-all   # View all firewall rules
 
 Editing Firewall Rules:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 sudo firewall-cmd --permanent --add-service=<service>   # Add a rule to allow a service (e.g., ssh, http)
@@ -63,7 +63,7 @@ sudo firewall-cmd --reload   # Apply changes
 
 Running Processes:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 ps aux   # List all running processes
@@ -71,28 +71,31 @@ ps aux   # List all running processes
 
 Users:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
+
 ```
 sudo cat /etc/passwd   # List all users
 ```
 
 Fail2ban Logs:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
+
 ```
 sudo tail -n 50 /var/log/fail2ban.log   # Check the tail of Fail2ban logs
 ```
 
 System Mail:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
+
 ```
 sudo mail   # Check system mail
 ```
 
 System Security Check:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 sudo chkrootkit   # Check for rootkits
@@ -101,7 +104,7 @@ sudo rkhunter --check   # Run Rootkit Hunter
 
 Server Load:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 uptime   # Show server load and uptime
@@ -109,7 +112,7 @@ uptime   # Show server load and uptime
 
 Storage Usage:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
 
 ```
 df -h   # Show disk usage of file systems
@@ -117,7 +120,8 @@ df -h   # Show disk usage of file systems
 
 Other Useful Commands:
 
-    CentOS/Ubuntu:
+CentOS/Ubuntu:
+
 ```
 top             # Display system tasks
 netstat -tuln   # Display listening ports
