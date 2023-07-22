@@ -98,6 +98,11 @@ sudo tail -n 50 /var/log/fail2ban.log
 ```
 sudo fail2ban-client set <jail_name> unbanip <ip_address>
 ```
+## Finally, to search the banned IPs: 
+
+```
+grep "Ban " /var/log/fail2ban.log
+```
 
 Conclusion:
 
