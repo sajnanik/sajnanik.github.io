@@ -1,5 +1,5 @@
 ---
-title: "Securing Server Access with IP Address Restrictions"
+title: "Linux Server Hardening 101 - Securing Server Access with IP Address Restrictions"
 date: 2023-04-20 T19:34:30-04:00
 categories:
   - blog
