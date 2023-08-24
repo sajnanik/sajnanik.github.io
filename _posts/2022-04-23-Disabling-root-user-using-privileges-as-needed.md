@@ -1,5 +1,5 @@
 ---
-title: "Linux Hardening 101 - Disabling Root User & using privileges when required"
+title: "Linux Server Hardening 101 - Disabling Root User & using privileges when required"
 date: 2022-04-23 T19:34:30-04:00
 categories:
   - blog
