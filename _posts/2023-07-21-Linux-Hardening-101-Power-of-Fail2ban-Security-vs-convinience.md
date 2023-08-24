@@ -1,12 +1,13 @@
 ---
-title: "The Power of Fail2ban: A Balancing Act Between Security and User Convenience"
+title: "Using Fail2ban: Ban failed security attempts"
 date: 2023-04-21 T19:34:30-04:00
 categories:
   - blog
 tags:
   - Linux
-  - cybersecurity
+  - Cybersecurity
   - Tutorials
+  - Linux Hardening 101
 ---
 
 Fail2ban, a versatile and powerful intrusion prevention tool, has garnered both acclaim and caution in the realm of server security. As a guardian of our digital fortresses, it relentlessly watches for malicious actors attempting to breach our defenses, often resulting in the swift banning of suspicious IP addresses. However, in certain scenarios, Fail2ban's zealous protection might inadvertently catch legitimate users in its crossfire. As a result, some administrators hesitate to embrace it, fearing that it might lead to locking out users who may have merely forgotten their passwords. This article explores the benefits of Fail2ban, why it might not always be implemented, and how it can be effectively utilized in isolated server environments with known user IPs or static VPNs, creating a fine balance between enhanced security and user convenience.
