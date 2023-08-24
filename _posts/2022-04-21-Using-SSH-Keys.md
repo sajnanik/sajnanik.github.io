@@ -73,13 +73,27 @@ This command generates both the *private key (`id_rsa`)* and the *public key (`i
 ```
 cat ~/.ssh/id_rsa.pub
 ```
-**Using the Public Key in other remote servers:** To use the SSH key for authentication, you need to copy the public key to the remote server's `~/.ssh/authorized_keys` file. Copy the contents to your local computer on Notepad and create the same name file inside that directory in the destination server. 
+**Using the Public Key in servers:** To use the SSH key for authentication, you need to copy the public key content to the remote server's authorized file content, which will be found at `~/.ssh/authorized_keys`. If the file does not exist, create one. Copy the contents of the public key to your local computer on Notepad and create a file named `authorized_keys` in the `~/.ssh/` directory. Paste the contents into it and your server will now accept the your private key which is paired with the public key you just authorized. 
+
 **Make sure to delete the copied contents from your local computer.**
 
-**Protect Private Key:** Ensure that your private key (`id_rsa`) is stored securely on your Ubuntu server. Set proper permissions to the private key file to restrict access:
+Once you've added the public key to the authorized_keys file on the server for authentication, it's generally a good practice to keep the private key securely on the client machine and not store it on the server. The private key is meant to be kept secret and should only be accessible by the user who generated it. You can delete both id_rsa and id_rsa.pub files from the server. However, if you want to keep them in your server, make sure they are properly managed. 
+
+**The private keys are paired to a user**
+When you created the keys, they were attached to the user which created the keys, normally being the sudo user. You will now, want to use your own user, instead of the sudo user, in order to track access management based on the user.
+
 ```
+# Change ownership of private and public key files, replace user:user with username
+sudo chown user:user ~/.ssh/id_rsa
+sudo chown user:user ~/.ssh/id_rsa.pub
+
+# Set restrictive permissions for the private key (Owner can read+write, group and others have no permissions)
 chmod 600 ~/.ssh/id_rsa
+
+# Set appropriate permissions for the public key (Ownser can read+write, group and others have read permission)
+chmod 644 ~/.ssh/id_rsa.pub
 ```
+**Login using the private keys**
 If you are using a SSH Terminal with GUI you can probably load the private key to make the connection to your server. Alternatively, you can use the code below to connect using a bare terminal.  The -i specifies the location of the private key.
 
 ```
