@@ -1,5 +1,5 @@
 ---
-title: "Updating & Patching Linux Systems"
+title: "Linux Server Hardening 101 - Updating & Patching Linux Systems"
 date: 2022-04-24 T19:34:30-04:00
 categories:
   - blog
