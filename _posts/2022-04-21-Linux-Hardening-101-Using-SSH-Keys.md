@@ -5,8 +5,9 @@ categories:
   - blog
 tags:
   - Linux
-  - cybersecurity
+  - Cybersecurity
   - Tutorials
+  - Linux Hardening 101
 ---
 
 SSH keys are used for secure communication between a client and a server using the SSH (Secure Shell) protocol. SSH keys are a more secure alternative to traditional password-based authentication. The following information is tailored towards Ubuntu systems.
