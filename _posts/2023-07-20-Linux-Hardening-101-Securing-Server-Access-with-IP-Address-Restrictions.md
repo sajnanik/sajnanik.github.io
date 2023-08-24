@@ -5,8 +5,9 @@ categories:
   - blog
 tags:
   - Linux
-  - cybersecurity
+  - Cybersecurity
   - Tutorials
+  - Linux Hardening 101
 ---
 # Securing Server Access with IP Address Restrictions
 
