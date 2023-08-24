@@ -1,5 +1,5 @@
 ---
-title: "Using Fail2ban: Ban failed security attempts"
+title: "Linux Server Hardening 101 - Using Fail2ban: Ban failed security attempts"
 date: 2023-04-21 T19:34:30-04:00
 categories:
   - blog
