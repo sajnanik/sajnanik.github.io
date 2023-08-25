@@ -100,6 +100,29 @@ If you are using a SSH Terminal with GUI you can probably load the private key t
 ssh -i ~/.ssh/id_rsa user@remote_server
 ```
 
+If all is working and you are able to login using SSH keys, you should now disable password based authentication. 
+**Disable Password Based Authentication**
+
+To do so, you will need to edit your sshd configuration file. You can do so by running
+```
+sudo nano /etc/ssh/sshd_config
+```
+Inside you will find the line `#PasswordAuthentication` remove the `#` do uncomment and type no at the end like `PasswordAuthentication no`
+Then modify the line `#PubkeyAuthentication` and change to yes like `PubkeyAuthentication yes`
+ctrol-shift-o = save
+ctrol-shift-x = exit
+
+In the new ubuntu release, there is another file you have to modify - this will be located inside the `sshd_config.d` directory. The number before the file may be different to the one below 
+
+```
+sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
+```
+Inside you will find the line `PasswordAuthentication yes` change it to `PasswordAuthentication no`
+ctrol-shift-o = save
+ctrol-shift-x = exit
+
+Finally restart SSH `sudo systemctl restart ssh` and you are done.
+
 From now onward, while you will create root users, you should disable those users, harden your server and install the same key on them to access without username/password and avoid having to remember or store the passwords locally. You can instead have one password for your private key which unlocks access to all your servers. 
 
 Remember that SSH keys provide enhanced security for remote access, and their proper management is crucial. Always keep your private key secure and follow best practices for key rotation, passphrase usage, and key distribution.
